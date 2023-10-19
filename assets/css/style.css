@@ -1,0 +1,123 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Josefin+Sans&family=Mulish:wght@500&family=Playfair+Display&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Josefin+Sans&family=Mulish:wght@500&family=Oleo+Script&family=Playfair+Display&display=swap");
+ul {
+  list-style-type: none;
+  text-align: right;
+  padding-right: 90px;
+}
+
+li {
+  display: inline;
+  margin-right: 50px;
+}
+
+li a {
+  text-decoration: none;
+
+  color: black;
+}
+
+li a:hover {
+  color: #577bef;
+}
+body {
+  margin-left: 120px;
+  margin-right: 120px;
+  font-family: Mulish;
+}
+.section1 {
+  margin-top: 70px;
+  background-image: url("../images/homeimg.jpg");
+  background-size: cover;
+  background-position: center; /* Centre l'image horizontalement */
+  height: 200vh; /* Set the section's height to the viewport height for full-screen effect */
+}
+.container1 {
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.title-div {
+  margin-top: 50px;
+  font-family: Oleo Script;
+  font-size: 64px;
+  width: 653px;
+  height: 185px;
+  margin-bottom: 200px;
+}
+.description-div {
+  font-size: 32px;
+  width: 964px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 200px;
+}
+.btn-voir-catalogue {
+  border: 3px solid #ffffff; /* Add an optional border */
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.btn-voir-catalogue:hover {
+  font-size: 32px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.btn-voir-catalogue:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* section temoignage */
+.temoignages-title,
+.faq-title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 200px;
+  margin-bottom: 70px;
+}
+.temoignages-container {
+  background-color: #d9d9d9;
+  padding: 20px 20px;
+}
+.btn-membre {
+  margin-top: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.p2 {
+  color: #665656;
+  font-style: italic;
+}
+.div-btn-membre {
+  display: flex;
+  justify-content: flex-end;
+}
+/* section faq */
+.visible-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+.visible-content img:hover {
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
+}
+.toggle-content{
+  background: #EBEBEB;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 10px 20px;
+}
