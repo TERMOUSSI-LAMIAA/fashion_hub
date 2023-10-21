@@ -13,7 +13,6 @@ li {
 
 li a {
   text-decoration: none;
-
   color: black;
 }
 
@@ -221,45 +220,66 @@ body {
 }
 /* _______________________________catalogue page_______________________________________ */
 /* menu catalogue */
-
 .menu-categorie-div {
   margin-top: 70px;
   display: flex;
   justify-content: center;
 }
-.div-categorie-enfant,
-.div-categorie-femme,
-.div-categorie-homme {
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 500px;
-}
-.div-categorie-femme {
+#div-categorie-femme {
   background-image: url("../images/women.jpg");
 }
-.div-categorie-enfant {
+#div-categorie-enfant {
   background-image: url("../images/kids.jpg");
 }
-.div-categorie-homme {
+#div-categorie-homme {
   background-image: url("../images/men.jpg");
 }
-.div-categorie-femme button,
-.div-categorie-enfant button {
+.div-categorie button {
   border: 3px solid #ffffff;
-  color: #ffffff;
   padding: 10px 20px;
   font-size: 24px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.div-categorie-femme button:hover,
-.div-categorie-homme,
-.div-categorie-enfant button:hover {
+.div-categorie button a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.div-categorie button:hover {
   font-size: 32px;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.div-categorie-femme button:active,
-.div-categorie-enfant button:active {
+.div-categorie button:active {
   background-color: rgba(0, 0, 0, 0.5);
+}
+.div-categorie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 500px;
+}
+/* --------------------------------------------------catalogue pages---------------------------------------- */
+.categorie-title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+.articles-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.article-p2{
+  font-weight: bold;
+  color: #907F7F;;
 }
