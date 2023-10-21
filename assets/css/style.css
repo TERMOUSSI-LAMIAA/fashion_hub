@@ -20,17 +20,17 @@ li a {
 li a:hover {
   color: #577bef;
 }
+/* -----------------------------home page--------------------------------- */
 body {
   margin-left: 120px;
   margin-right: 120px;
   font-family: Mulish;
 }
 .section1 {
-  margin-top: 70px;
   background-image: url("../images/homeimg.jpg");
   background-size: cover;
   background-position: center; /* Centre l'image horizontalement */
-  height: 200vh; /* Set the section's height to the viewport height for full-screen effect */
+  height: 200vh;
 }
 .container1 {
   margin-top: 50px;
@@ -58,7 +58,7 @@ body {
   margin-bottom: 200px;
 }
 .btn-voir-catalogue {
-  border: 3px solid #ffffff; /* Add an optional border */
+  border: 3px solid #ffffff;
   color: #ffffff;
   padding: 10px 20px;
   font-size: 24px;
@@ -81,8 +81,10 @@ body {
   margin-bottom: 70px;
 }
 .temoignages-container {
-  background-color: #d9d9d9;
+  color: #fff;
+  background-image: url(../images/back-temoin.jpg);
   padding: 20px 20px;
+  background-size: cover;
 }
 .btn-membre {
   margin-top: 30px;
@@ -90,19 +92,72 @@ body {
   cursor: pointer;
   font-size: 20px;
   border: none;
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
+  background-color: transparent;
   display: flex;
   align-items: center;
   gap: 20px;
 }
+.btn-membre:hover {
+  background-color: #380c36c3;
+  color: #fff;
+}
+.btn-membre:active {
+  background-color: #393939;
+  color: #fff;
+}
 .p2 {
-  color: #665656;
+  color: #fffb00;
   font-style: italic;
 }
 .div-btn-membre {
   display: flex;
   justify-content: flex-end;
 }
+.temoignage {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+}
+.right-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+.img-div {
+  width: 450px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.img-div2 {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.img-div2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-div3 {
+  width: 380px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.img-div3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* section faq */
 .visible-content {
   display: flex;
@@ -115,9 +170,96 @@ body {
   height: 55px;
   width: 55px;
 }
-.toggle-content{
-  background: #EBEBEB;
+.toggle-content {
+  background: #ebebeb;
   margin-right: 20px;
   margin-left: 20px;
   padding: 10px 20px;
+}
+/* section footer */
+.footer-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ebebeb;
+  height: 300px;
+}
+.footer-container p {
+  text-align: center;
+}
+.social-media-div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-div img:hover {
+  width: 27px;
+  height: 27px;
+}
+.copyright-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  color: #6a6262;
+}
+
+.last-div-footer {
+  display: flex;
+  justify-content: space-around;
+}
+.last-div-footer a {
+  text-decoration: none;
+  color: black;
+}
+.last-div-footer a:hover {
+  text-decoration: underline;
+}
+/* _______________________________catalogue page_______________________________________ */
+/* menu catalogue */
+
+.menu-categorie-div {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.div-categorie-enfant,
+.div-categorie-femme,
+.div-categorie-homme {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 500px;
+}
+.div-categorie-femme {
+  background-image: url("../images/women.jpg");
+}
+.div-categorie-enfant {
+  background-image: url("../images/kids.jpg");
+}
+.div-categorie-homme {
+  background-image: url("../images/men.jpg");
+}
+.div-categorie-femme button,
+.div-categorie-enfant button {
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.div-categorie-femme button:hover,
+.div-categorie-homme,
+.div-categorie-enfant button:hover {
+  font-size: 32px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.div-categorie-femme button:active,
+.div-categorie-enfant button:active {
+  background-color: rgba(0, 0, 0, 0.5);
 }
