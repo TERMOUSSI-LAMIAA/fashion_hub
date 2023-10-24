@@ -1,33 +1,40 @@
-// document.addEventListener('DOMContentLoaded', function(){
-//     const fleche =document.querySelectorAll('.visible-content img');
-//     console.log(fleche);
-//     fleche.forEach(element => {
-//         element.addEventListener('click',function(){
-//             if (this.src.includes('circle-add')){
-//                 this.src='assets/images/circle-minus-svgrepo-com.svg';
-//             }
-//             else if (this.src.includes('circle-minus')){
-//                 this.src='assets/images/circle-add-svgrepo-com.svg';
-//             }
-//         })
-//     });
-// })
-// Sélectionner tous les boutons de bascule et sections FAQ
-
-const toggleButtons = document.querySelectorAll(".toggleButton");
-const answers = document.querySelectorAll(".answers");
-
-// Ajouter des gestionnaires d'événement de clic à chaque bouton
-toggleButtons.forEach((button, index) => {
-  button.addEventListener("click", function() {
-    // Basculez la classe "hidden" de la section FAQ associée pour l'afficher ou la masquer
-    answers[index].classList.toggle("answers");
+document.addEventListener('DOMContentLoaded', function(){
+  //changer le plus/moins img
+  const fleche = document.querySelectorAll('.toggleButton');
+  console.log(fleche);
+  fleche.forEach(button => {
+      button.addEventListener('click', function () {
+          const image = this.querySelector('img');
+          if (image.src.includes('circle-add')) {
+              image.src = 'assets/images/circle-minus-svgrepo-com.svg';
+          } else if (image.src.includes('circle-minus')) {
+              image.src = 'assets/images/circle-add-svgrepo-com.svg';
+          }
+      })
   });
-});
-//burger menu
-const menuToggle = document.getElementById('menu-toggle');
-const menu_desktop = document.querySelector('.menu-desktop');
+    //burger menu
+    const menuToggle = document.querySelectorAll('.menu-toggle');
+    const menuDesktop = document.querySelectorAll('.menu-desktop');
 
-menuToggle.addEventListener('click', () => {
-    menu_desktop.classList.toggle('active');
-});
+    menuToggle.forEach((toggle, index) => {
+      toggle.addEventListener('click', () => {
+          menuDesktop[index].classList.toggle('active');
+      });
+  });
+//show /hide faq
+    const toggleButtons = document.querySelectorAll(".toggleButton");
+    const answer = document.querySelectorAll(".answer");
+    toggleButtons.forEach((button, index) => {
+      button.addEventListener("click", function() {
+        // Basculez la classe "hidden" de la section FAQ associée pour l'afficher ou la masquer
+        answer[index].classList.toggle("hidden");
+      });
+    });
+
+
+
+})
+
+
+
+
