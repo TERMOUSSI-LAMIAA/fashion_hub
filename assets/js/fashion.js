@@ -37,7 +37,15 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
   var email = document.getElementById('email').value;
   var telephone = document.getElementById('telephone').value;
   var motdepasse = document.getElementById('motdepasse').value;
-  
+  var emailError = document.getElementById('email-error');
+  var telephoneError = document.getElementById('tel-error');
+  var motdepasseError = document.getElementById('mdp-error');
+
+
+  emailError.textContent = '';
+  telephoneError.textContent = '';
+  motdepasseError.textContent = '';
+
   var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   var telPattern = /^\d{10}$/;
   var passPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
@@ -47,17 +55,23 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
     event.preventDefault();
   } else {
     if (!emailPattern.test(email)) {
-        alert('Adresse électronique invalide');
+        // alert('Adresse électronique invalide');
+        emailError.textContent = 'Adresse électronique invalide';
+        emailError.style.color = 'red';
         event.preventDefault();
     }
     
     if (!telPattern.test(telephone)) {
-        alert('Téléphone portable invalide');
+        // alert('Téléphone portable invalide');
+        telephoneError.textContent = 'Téléphone portable invalide';
+        telephoneError.style.color = 'red';
         event.preventDefault();
     }
     
     if (!passPattern.test(motdepasse)) {
-        alert('Mot de passe invalide. Le mot de passe doit contenir au moins 8 caractères, dont au moins une lettre majuscule, une lettre minuscule et un chiffre.');
+        // alert('Mot de passe invalide. Le mot de passe doit contenir au moins 8 caractères, dont au moins une lettre majuscule, une lettre minuscule et un chiffre.');
+        motdepasseError.textContent = 'Mot de passe invalide. Le mot de passe doit contenir au moins 8 caractères, dont au moins une lettre majuscule, une lettre minuscule et un chiffre.';
+        motdepasseError.style.color = 'red';
         event.preventDefault();
     }
 }

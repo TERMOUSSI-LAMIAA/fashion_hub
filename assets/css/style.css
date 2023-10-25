@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Josefin+Sans&family=Mulish:wght@500&family=Oleo+Script&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Irish+Grover&family=Josefin+Sans&family=Mulish:wght@500&family=Oleo+Script&family=Playfair+Display&display=swap");
+
 ul {
   list-style-type: none;
   text-align: right;
@@ -40,10 +41,17 @@ li a:hover {
 }
 .logo {
   margin-left: 60px;
+  display: flex;
+  align-items: center;
+}
+.logo h1 {
+  margin-left: -25px;
+  font-family: Irish Grover;
+  /* font-family: Oleo Script; */
 }
 .logo img {
   height: 100px;
-  width: 170px;
+  width: 100px;
 }
 /* -----------------------------home page--------------------------------- */
 body {
@@ -118,7 +126,6 @@ body {
   cursor: pointer;
   font-size: 20px;
   border: none;
-  /* background-color: #d9d9d9; */
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -139,6 +146,9 @@ body {
 .div-btn-membre {
   display: flex;
   justify-content: flex-end;
+}
+.div-btn-membre a {
+  text-decoration: none;
 }
 .temoignage {
   display: flex;
@@ -340,15 +350,17 @@ body {
   line-height: 3;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 550px;
 }
+
 .right-div p {
   text-align: center;
 }
 .div-menu-cnx {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin-top: 0px;
 }
 .div-menu-cnx p {
   padding: 10px 20px;
@@ -414,7 +426,6 @@ body {
     width: 300px;
     height: 185px;
     margin-bottom: 200px;
- 
   }
   .description-div {
     font-size: 16px;
@@ -423,7 +434,6 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 20px;
     margin-bottom: 100px;
-
   }
   .btn-voir-catalogue {
     border: 3px solid #ffffff;
@@ -433,7 +443,7 @@ body {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  .btn-voir-catalogue:hover{
+  .btn-voir-catalogue:hover {
     font-size: 20px;
     background-color: #380c36c3;
   }
@@ -468,7 +478,6 @@ body {
     cursor: pointer;
     font-size: 16px;
     border: none;
-    /* background-color: #d9d9d9; */
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -525,14 +534,21 @@ body {
   .menu-desktop {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 70px;
     right: 5%;
     width: 50%;
-    background-color: black;
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 0;
     z-index: 1;
+    height: 250px;
+  }
+  .menu-desktop li {
+    line-height: 3;
+    text-align: center;
+    margin: 10px 0;
   }
   .menu-desktop li a {
     color: white;
